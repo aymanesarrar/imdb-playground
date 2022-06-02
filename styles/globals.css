@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input-icon {
+	background: url('/icons8-search-24.png') no-repeat scroll 5px 9px;
+	background-color: white;
+	padding-left: 50px;
+}
