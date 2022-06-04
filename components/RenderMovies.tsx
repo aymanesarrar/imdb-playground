@@ -5,7 +5,7 @@ import { movieCard } from "./MovieCard";
 export const RenderMovies = () => {
   const list = useRecoilValue(data);
   return (
-    <div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2">
       {list.length !== 0 &&
         list.map((item: movieCard) => {
           return (
