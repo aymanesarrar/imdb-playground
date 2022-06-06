@@ -30,6 +30,11 @@ const url_id = atom({
   default: "",
 });
 
+const modal = atom({
+  key: "modal",
+  default: false
+})
+
 const charState = selector({
   key: "charState",
   get: ({ get }) => {
@@ -37,6 +42,7 @@ const charState = selector({
     return name + " world";
   },
 });
+
 
 const full_url = selector({
 	key: "full_url",
@@ -47,4 +53,4 @@ const full_url = selector({
 	}
 })
 
-export { inputState, charState, data, tvs, Titletype, toggle, url_id, full_url };
+export { inputState, charState, data, tvs, Titletype, toggle, url_id, full_url, modal };

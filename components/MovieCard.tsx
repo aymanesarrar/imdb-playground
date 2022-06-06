@@ -1,5 +1,9 @@
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
+import { MouseEventHandler } from "react";
+import { useRecoilState } from "recoil";
+import { modal } from "./states";
+
 export interface movieCard {
   id?: string;
   rank: number;
@@ -8,6 +12,7 @@ export interface movieCard {
   image: string;
   imDbRating: number;
   imDbRatingCount: number;
+  onClick: MouseEventHandler
 }
 export const MovieCard = ({
   rank,
@@ -16,9 +21,10 @@ export const MovieCard = ({
   image,
   imDbRating,
   imDbRatingCount,
+  onClick
 }: movieCard) => {
   return (
-    <div className="flex items-center p-3 justify-between hover:bg-zinc-400 cursor-pointer transition-all">
+    <div  onClick={onClick} className="flex items-center justify-between p-3 transition-all cursor-pointer hover:bg-zinc-400">
       <div className="flex items-center w-1/2">
         <Image src={image} width={45} height={67} alt={title} />
         <p className="ml-2 font-bold">

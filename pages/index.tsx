@@ -6,10 +6,13 @@ import { Header } from '../components/Header'
 import { MovieCard } from '../components/MovieCard'
 import { useEffect } from 'react'
 import { useRecoilValue, useRecoilState } from 'recoil'
-import { data } from '../components/states'
+import { data, modal } from '../components/states'
 import { RenderMovies } from '../components/RenderMovies'
+import { Modal } from '../components/Modal'
+import { Video } from '../components/Video'
 const Home: NextPage = () => {
   const [movies, setMovies] = useRecoilState(data);
+  const bgmodal = useRecoilValue(modal)
   useEffect(() => {
     const getData = async () => {
       const list = await fetch(
@@ -29,7 +32,13 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <Layout>
-        <RenderMovies />
+        {bgmodal ? (
+          <Modal>
+            <Video id="o5Mwa_TJ3HM" />
+          </Modal>
+        ) : (
+          <RenderMovies />
+        )}
       </Layout>
     </div>
   );

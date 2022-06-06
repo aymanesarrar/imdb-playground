@@ -10,6 +10,7 @@ export const Video = ({id}: Ivideo) => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       title="Embedded youtube"
+      className="w-1/2 h-96"
     ></iframe>
   );
 }
