@@ -26,7 +26,12 @@ export const Modal = ({ children, open }: Props) => {
   if (!open) return null;
   return createPortal(
     <div className="bg-[rgba(0,0,0,0.7)] fixed w-full min-h-full flex flex-col justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[1000]">
-      <button onClick={handleModal}>Close</button>
+      <button
+        className="px-4 py-1 mb-4 text-white bg-zinc-900"
+        onClick={handleModal}
+      >
+        Close
+      </button>
       {children}
     </div>,
     document.getElementById("__next")!

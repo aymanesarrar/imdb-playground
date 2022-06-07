@@ -19,7 +19,7 @@ export const RenderMovies = () => {
       setfullUrl(data.videoId);
     };
     geturl();
-  }, [Idmov, setfullUrl]);
+  }, [Idmov]);
   const handleModal = (movid: string) => {
     setIdmov(movid);
     setModalbg(!modalbg);
