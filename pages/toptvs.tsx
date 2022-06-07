@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Header } from "../components/Header";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { Titletype, tvs } from "../components/states";
+import { Titletype, tvs } from "../components/utils/states";
 import { Layout } from "../components/Layout";
 import { RenderSeries } from "../components/RenderSeries";
 

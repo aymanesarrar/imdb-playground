@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil";
 import { MovieCard } from "./MovieCard";
-import { tvs } from "./states";
+import { tvs } from "./utils/states";
 import { movieCard } from "./MovieCard";
 export const RenderSeries = () => {
   const list = useRecoilValue(tvs);

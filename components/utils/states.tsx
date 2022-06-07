@@ -25,15 +25,21 @@ const toggle = atom({
   default: false,
 });
 
-const url_id = atom({
-  key: "url_id",
+const url = atom({
+  key: "url",
+  default: "",
+});
+
+const id = atom({
+  key: "id",
   default: "",
 });
 
 const modal = atom({
   key: "modal",
-  default: false
-})
+  default: false,
+});
+
 
 const charState = selector({
   key: "charState",
@@ -43,14 +49,4 @@ const charState = selector({
   },
 });
 
-
-const full_url = selector({
-	key: "full_url",
-	get: ({get}) => {
-		const youtube_link = "https://www.youtube.com/watch?v=";
-		const id = get(url_id);
-		return youtube_link + id;
-	}
-})
-
-export { inputState, charState, data, tvs, Titletype, toggle, url_id, full_url, modal };
+export { inputState, charState, data, tvs, Titletype, toggle, url, modal, id };

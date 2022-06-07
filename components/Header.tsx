@@ -1,6 +1,6 @@
 import { ImdbLogo } from "./ImdbLogo";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { inputState, Titletype } from "./states";
+import { inputState, Titletype } from "./utils/states";
 export const Header = () => {
   const [name, setName] = useRecoilState(inputState);
   return (

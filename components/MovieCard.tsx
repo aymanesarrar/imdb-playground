@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MouseEventHandler } from "react";
 import { useRecoilState } from "recoil";
-import { modal } from "./states";
+import { modal } from "./utils/states";
 
 export interface movieCard {
   id?: string;
