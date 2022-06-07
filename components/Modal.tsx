@@ -25,7 +25,7 @@ export const Modal = ({ children, open }: Props) => {
   };
   if (!open) return null;
   return createPortal(
-    <div className="bg-[rgba(0,0,0,0.7)] absolute w-full h-full flex flex-col justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[1000]">
+    <div className="bg-[rgba(0,0,0,0.7)] fixed w-full min-h-full flex flex-col justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[1000]">
       <button onClick={handleModal}>Close</button>
       {children}
     </div>,
