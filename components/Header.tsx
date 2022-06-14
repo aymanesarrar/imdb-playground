@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <header className=" bg-[#121212]">
       <div className="flex p-2 items-center lg:max-w-7xl lg:mx-auto lg:justify-center">
-        <ImdbLogo />
+        <ImdbLogo className="cursor-pointer hover:scale-105 hover:translate-x-1 transition-all duration-200" />
         <input
           type="text"
           placeholder="search in IMDB"
