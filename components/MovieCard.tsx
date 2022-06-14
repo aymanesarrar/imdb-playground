@@ -12,7 +12,7 @@ export interface movieCard {
   image: string;
   imDbRating: number;
   imDbRatingCount: number;
-  onClick: MouseEventHandler
+  onClick: MouseEventHandler;
 }
 export const MovieCard = ({
   rank,
@@ -21,10 +21,13 @@ export const MovieCard = ({
   image,
   imDbRating,
   imDbRatingCount,
-  onClick
+  onClick,
 }: movieCard) => {
   return (
-    <div  onClick={onClick} className="flex items-center justify-between p-3 transition-all cursor-pointer hover:bg-zinc-400">
+    <div
+      onClick={onClick}
+      className="flex items-center justify-between p-3 transition-all cursor-pointer hover:bg-zinc-400 hover:translate-y-1 hover:scale-105 duration-200"
+    >
       <div className="flex items-center w-1/2">
         <Image src={image} width={45} height={67} alt={title} />
         <p className="ml-2 font-bold">

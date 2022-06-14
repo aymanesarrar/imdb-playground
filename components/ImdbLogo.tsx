@@ -1,16 +1,19 @@
+import { useRouter } from "next/router";
 interface props {
-	className?: string
+  className?: string;
 }
-export const ImdbLogo = ({className}: props) => {
-	return (
+export const ImdbLogo = ({ className }: props) => {
+  const router = useRouter();
+  return (
     <svg
+      onClick={() => router.push("/")}
       id="home_img"
       xmlns="http://www.w3.org/2000/svg"
       width="64"
       height="32"
       viewBox="0 0 64 32"
       version="1.1"
-	  className={className}
+      className={className}
     >
       <g fill="#F5C518">
         <rect x="0" y="0" width="100%" height="100%" rx="4"></rect>
@@ -27,4 +30,4 @@ export const ImdbLogo = ({className}: props) => {
       </g>
     </svg>
   );
-}
+};

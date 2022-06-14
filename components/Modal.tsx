@@ -27,7 +27,7 @@ export const Modal = ({ children, open }: Props) => {
   return createPortal(
     <div className="bg-[rgba(0,0,0,0.7)] fixed w-full min-h-full flex flex-col justify-center items-center top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[1000]">
       <button
-        className="px-4 py-1 mb-4 text-white bg-zinc-900"
+        className="px-4 py-1 mb-4 text-white bg-zinc-900 hover:bg-zinc-600 hover:translate-y-1 hover:scale-105 transition-all duration-500"
         onClick={handleModal}
       >
         Close
